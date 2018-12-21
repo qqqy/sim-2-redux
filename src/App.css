@@ -1,3 +1,20 @@
+h1 {
+  color: #3B5249;
+  margin: 2px;
+}
+
+button {
+  background-color: #8AEA92;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px black solid;
+}
+
 .main {
   display: flex;
   height: 100vh;
@@ -18,4 +35,28 @@ background-color: #AFD4C0;
 .header {
   height: 75px;
   background-color: #519872;
+}
+
+/* WIZARD STUFF */
+
+form {
+  width: auto;
+  padding: 20px;
+}
+
+.input-line {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.complete-button {
+  justify-content: space-around;
+}
+
+h6 {
+  min-width: 30%;
+  margin: 2px;
+  font-size: 15px;
+  color: #3B5258;
 }
