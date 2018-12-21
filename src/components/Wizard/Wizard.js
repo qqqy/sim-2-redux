@@ -18,13 +18,14 @@ class Wizard extends Component{
     this.setState({
       [line]: value
     })
-    console.log(this.state[line])
+    // console.log(this.state[line])
   }
 
   clickHandle(add, stay){
     console.log(`clickHandle invoked on` , this.state)
     if(add){
-      axios.post('/api/submit', this.state)
+      axios.post('http://localhost:4040/api/submit', this.state)
+      .then((res) => console.log(res.data))
     }
   }
 

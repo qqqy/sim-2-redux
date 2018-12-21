@@ -1,13 +1,15 @@
 const express = require('express')
 const massive = require('massive')
-// const ctrl = require('./controller')
+const ctrl = require('./controller')
 require('dotenv').config()
+const cors = require('cors')
 
 const{ session_secret, connection_string, server_port } = process.env
 
 let app = express()
 
 app.use(express.json())
+app.use(cors())
 
 
 // TEST ENDPOINT //
@@ -17,9 +19,8 @@ app.get('/api/test', (req, res) => {
 })
 
 // FUNCTIONAL ENPOINTS //
-app.post('/api/submit' , (req, res) => {
-  res.status(200).send(req.body)
-})
+app.post('/api/submit' , ctrl.submit)
+app.get('/api/all' , ctrl.all)
 
 
 
