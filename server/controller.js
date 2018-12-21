@@ -15,5 +15,11 @@ module.exports = {
     instance.all()
     .then((reply) => res.status(200).send(reply))
     .catch((err) => res.status(500).send(err))
+  } ,
+  delete: function(req, res){
+    let instance = req.app.get('db')
+    instance.delete(req.params)
+    .then(() => res.sendStatus(200))
+    .catch((err) => res.status(500).send(err))
   }
 }

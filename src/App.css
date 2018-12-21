@@ -60,3 +60,17 @@ h6 {
   font-size: 15px;
   color: #3B5258;
 }
+
+/* HOUSE STUFF */
+
+.house-card {
+  background-color: #DEDEDE;
+  margin: 20px;
+  position: relative;
+}
+
+.delete {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}

@@ -21,6 +21,7 @@ app.get('/api/test', (req, res) => {
 // FUNCTIONAL ENPOINTS //
 app.post('/api/submit' , ctrl.submit)
 app.get('/api/all' , ctrl.all)
+app.delete('/api/delete/:id', ctrl.delete)
 
 
 
