@@ -60,7 +60,7 @@ class Dashboard extends Component{
       <div className='mid'>
         <header className='dash-header'>
           <h1>Dashboard</h1>
-          <Link to='/wizard'><button>Add New Property</button></Link>
+          <Link to='/wizard/wizard1'><button>Add New Property</button></Link>
         </header>
         {list}
       </div>

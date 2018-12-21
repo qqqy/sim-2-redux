@@ -6,6 +6,6 @@ import React from 'react'
 export default (
   <Switch>
     <Route path='/' component={ Dashboard } exact/>
-    <Route path='/wizard' component={ Wizard }/>
+    <Route path='/wizard' component={ Wizard } />
   </Switch>
 )
