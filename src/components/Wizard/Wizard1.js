@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { connect } from 'react-redux'
 
 class Wizard1 extends Component{
   constructor(props){
@@ -41,6 +42,7 @@ class Wizard1 extends Component{
 
   render(){
     let {propertyname, address, city, state, zip} = this.state
+    console.log(this.props)
     return(
             <form>
               <div className='input-line'><h6>Name of Property</h6><input 
@@ -58,4 +60,17 @@ class Wizard1 extends Component{
   }
 }
 
-export default Wizard1
+function mapStateToProps(redState){
+  let {propertyname, address, city, state, zip} = redState
+  return {
+    propertyname,
+    address,
+    city,
+    state,
+    zip
+  }
+}
+
+
+
+export default connect(mapStateToProps)(Wizard1)

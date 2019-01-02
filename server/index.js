@@ -12,6 +12,11 @@ app.use(express.json())
 app.use(cors())
 
 
+app.get('/api/testing', (req, res) => {
+  console.log('testing endpoint hit');
+  res.status(200).send('wat');
+})
+
 // TEST ENDPOINT //
 app.get('/api/test', (req, res) => {
   let db = req.app.get('db')

@@ -15,7 +15,8 @@ class Dashboard extends Component{
 
   componentDidMount(){
     // console.log('Mounting...')
-    setTimeout(this.getList(), 1500)
+    // setTimeout(this.getList(), 1500)
+    this.getList();
   }
 
   getList(){
